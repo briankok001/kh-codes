@@ -16,7 +16,6 @@ function isSignSeriesReverse(str) {
   return /((?:+(?=_)|_(?=\))|\)(?=\())|\((?=*)|*(?=&)|&(?=^)|^(?=%)|%(?=$)|$(?=#)|#(?=@|@(?=!)|!(?=~)){2,}\w)/g.test(str)
 }
 
-
 /**
  * 正序字母,至少3个一起组成的正序
  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
@@ -63,6 +62,7 @@ function pwd(p) {
 function pwd1(pwd) {
   return pwd.length >= 6 && pwd.length <= 20 && !pwd.match(/([a-zA-Z\d]){1}?\1{2,}/) && pwd.match(/(\d+[a-zA-Z]+)|([a-zA-Z]+\d+)/g)
 }
+
 const p = '122a';
 const p1 = '12s23@$%^^@#$$3';
 const p2 = '111abb'
